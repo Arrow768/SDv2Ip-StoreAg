@@ -1,9 +1,9 @@
 {
-    "name": "arrow768/sdv2-ip-storeag",
-    "description": "",
+    "name": "arrow768/sdv2ip-storeag",
+    "description": "SDv2 Item Provider for Alongubs Store",
     "authors": [
         {
-            "name": "Arrow768",
+            "name": "Werner Maisl",
             "email": "arrow768@sourcedonates.com"
         }
     ],
