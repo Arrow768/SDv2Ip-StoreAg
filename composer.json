@@ -1,0 +1,23 @@
+{
+    "name": "arrow768/sdv2-ip-storeag",
+    "description": "",
+    "authors": [
+        {
+            "name": "Arrow768",
+            "email": "arrow768@sourcedonates.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "4.2.*"
+    },
+    "autoload": {
+        "classmap": [
+            "src/migrations"
+        ],
+        "psr-0": {
+            "Arrow768\\Sdv2IpStoreag\\": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
