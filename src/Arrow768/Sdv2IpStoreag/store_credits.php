@@ -19,8 +19,9 @@ class store_credits
     {
         \Log::info("Store Items Provider - Store Credits called");
         \Log::info("User Mail:".$sd_user->email);
-        \Log::info("User Params:".var_dump($sd_user_infos));
-        \Log::info("Item Handler:".var_dump($sd_item_handler));
+        \Log::info("User Params:".print_r($sd_user_infos,true));
+        \Log::info("Item Handler:".print_r($sd_item_handler,true));
+        
     }
     
     function remove_item($sd_user,$sd_user_infos,$sd_item_handler)
