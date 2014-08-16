@@ -38,6 +38,10 @@ class store_credits
         
         $store_auth = $this->steamid_to_auth($steamid);
         \Log::info("Auth:". $store_auth);
+        
+        $store_user = \DB::Connection('ag_store')->table('store_users')->where('auth',$store_auth)->first();
+        \Log::info('Store User Name: '.$store_user->name);
+        \Log::info('Store User Credits: '.$store_user->credits);
     }
 
     function remove_item($sd_user, $sd_user_infos, $sd_user_params)
