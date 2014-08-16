@@ -15,36 +15,15 @@ namespace Arrow768\Sdv2IpStoreag;
 class store_credits
 {
     
-    function add_item($sd_user_id,$sd_item_id)
+    function add_item($sd_user,$sd_user_infos,$sd_item_handler)
     {
-        $item = \SDItem::find($sd_item_id);
-        if(!$item)
-        {
-            Log::Error("Could not find item with id: ".$sd_item_id);
-            exit();
-        }
-        
-        $user = \Sentinel::findById($sd_user_id);
-        if(!$user)
-        {
-            Log::Error("Could not find user with id:".$sd_user_id);
-            exit();
-        }
-        
-        $userinfo_steamid = \SDUserinfo::where('type','steamid')->where('user_id',$sd_user_id)->first();
-        if(!$userinfo_steamid)
-        {
-            Log::Error("Could not find Steamid for User");
-            exit();
-        }
-        
-        Log::Debug("Got Required info");
-        Log::Debug("Item Name:".$item->name_short);
-        Log::Debug("User Mail:".$user->email);
-        Log::Debug("SteamID64:".$userinfo_steamid->value);
+        Log::info("Store Items Provider - Store Credits called");
+        Log::info("User Mail:".$sd_user->email);
+        Log::info("User Params:".var_dump($sd_user_infos));
+        Log::info("Item Handler:".var_dump($sd_item_handler));
     }
     
-    function remove_item($sd_user_id,$sd_item_id)
+    function remove_item($sd_user,$sd_user_infos,$sd_item_handler)
     {
         
     }
