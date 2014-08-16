@@ -42,6 +42,11 @@ class store_credits
         $store_user = \DB::Connection('ag_store')->table('store_users')->where('auth',$store_auth)->first();
         \Log::info('Store User Name: '.$store_user->name);
         \Log::info('Store User Credits: '.$store_user->credits);
+        $new_credits = $store_user->credits + $credits;
+        
+        \DB::Connection('ag_store')->table('store_users')->where('id',$store_user->id)->update(array('credits'=>$new_credits));
+        \Log::info('Updated Store Credits to: '.$new_credits);
+        return true;
     }
 
     function remove_item($sd_user, $sd_user_infos, $sd_user_params)
