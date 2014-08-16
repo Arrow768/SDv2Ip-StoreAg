@@ -15,7 +15,7 @@ namespace Arrow768\Sdv2IpStoreag;
 class store_credits
 {
     
-    function add_item($sd_user,$sd_user_infos,$sd_user_params)
+    function add_item($sd_user,$sd_user_infos,$sd_item_handler_params)
     {
         \Log::info("Store Items Provider - Store Credits called");
         \Log::info("User Mail:".$sd_user->email);
