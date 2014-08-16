@@ -22,6 +22,7 @@ class Sdv2IpStoreagServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->package('arrow768/sdv2-ip-storeag');
+        include __DIR__ . '/../../routes.php';
     }
 
     /**
