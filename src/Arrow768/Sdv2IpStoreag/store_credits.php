@@ -15,16 +15,23 @@ namespace Arrow768\Sdv2IpStoreag;
 class store_credits
 {
     
-    function add_item($sd_user,$sd_user_infos,$sd_item_handler)
+    function add_item($sd_user,$sd_user_infos,$sd_item_handler_params)
     {
         \Log::info("Store Items Provider - Store Credits called");
         \Log::info("User Mail:".$sd_user->email);
-        \Log::info("User Params:".print_r($sd_user_infos,true));
-        \Log::info("Item Handler:".print_r($sd_item_handler,true));
+        \Log::info("Credits:".$sd_item_handler_params->credits);
+        
+        $steamid = "";
+        foreach($sd_user_infos as $sd_user_info)
+        {
+            \Log::info("User Info Type:".$sd_user_info->type);
+            \Log::info("User Info Value:".$sd_user_info->value);
+        }
+        
         
     }
     
-    function remove_item($sd_user,$sd_user_infos,$sd_item_handler)
+    function remove_item($sd_user,$sd_user_infos,$sd_item_handler_params)
     {
         
     }
