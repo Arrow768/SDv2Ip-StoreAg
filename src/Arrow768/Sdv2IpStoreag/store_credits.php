@@ -24,9 +24,16 @@ class store_credits
         $steamid = "";
         foreach($sd_user_infos as $sd_user_info)
         {
+            if($sd_user_info->type == "steamid")
+            {
+                $steamid = $sd_user_info->value;
+            }
+            
             \Log::info("User Info Type:".$sd_user_info->type);
             \Log::info("User Info Value:".$sd_user_info->value);
         }
+        \Log::info("Steam:".$steamid);
+        
         
         
     }
