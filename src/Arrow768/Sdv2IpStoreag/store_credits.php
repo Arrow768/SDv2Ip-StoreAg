@@ -3,13 +3,29 @@
 namespace Arrow768\Sdv2IpStoreag;
 
 /**
- * SDv2 Items Provider for Alongubs Store Plugin
+ * SDv2 Items Provider for Store
  * 
- * Assigns Store Credits to Users of Alongubkins Store Plugin
+ * A Items Provider for Alongubkins Store Plugin
+ * Contains the required functions that are used by SDv2
  * 
- *  @package    SDv2IP-Paypal
- *  @author     Werner Maisl
- *  @copyright  (c) 2013-2014 - Werner Maisl
+ * This file is Part of SDv2IP-Store
+ * SDv2IP-Store is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as
+ * published by the Free Software Foundation, either version 3 of the
+ * License, or (at your option) any later version. 
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ * 
+ * @package    SDv2IP-Store
+ * @author     Werner Maisl
+ * @copyright  (c) 2013-2014 - Werner Maisl
+ * @license    GNU AGPLv3 http://www.gnu.org/licenses/agpl-3.0.txt
  */
 class store_credits
 {
